@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sound</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+      <img src="img/logo.png" alt="">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Specification</a></li>
+        <li><a href="#">Product</a></li>
+        <li><a href="#">Connect</a></li>
+      </ul>
+        </div>
+        <div class="main">
+            <h1>the <br> real <br> sound</h1>
+            <div class="rightbtn">
+                <p>click here to listen</p>
+                <img src="img/play.png" id="icon">  
+            </div>
+        
+        </div>
+    </div>
+    <audio id="mysong">
+        <source src="music/Lucky You (Feat. Joyner Lucas) [Official Audio](MP3_160K).mp3" type="audio/mp3">
+    </audio>
+
+    <script>
+        var mysong = document.getElementById("mysong");
+        var icon = document.getElementById("icon");
+
+        icon.onclick = function(){
+            if(mysong.paused){
+             mysong.play();
+             icon.src = "img/pause.png";
+
+            }else{
+                mysong.pause();
+             icon.src = "img/play.png";
+
+            }
+        }
+    </script>
+    
+</body>
+</html>
